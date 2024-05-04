@@ -1,14 +1,16 @@
+import Content from "./components/Content";
 import SideBar from "./components/SideBar";
 import TitleBar from "./components/TitleBar";
 
 const App = () => {
   return (
     <div className="flex h-screen">
-      <div className="w-1/4">
+      <div className="">
         <SideBar />
       </div>
-      <div className="max-w-7xl mx-auto pt-20 px-6">
+      <div className="flex flex-col w-full lg:max-w-8xl">
         <TitleBar />
+        <Content />
       </div>
     </div>
   );

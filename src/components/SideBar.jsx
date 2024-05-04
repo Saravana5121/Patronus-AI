@@ -9,7 +9,7 @@ import { useState } from "react";
 const SideBar = () => {
   const [openMenu, setOpenMenu] = useState(false);
   return (
-    <>
+    <div className="hidden sm:hidden md:hidden lg:block xl:block">
       <aside className="fixed top-0 left-0 flex flex-col items-center justify-between h-screen p-4 bg-neutral-800">
         <div>
           <button
@@ -18,11 +18,11 @@ const SideBar = () => {
           >
             <MenuIcon />
           </button>
-          <div className="bg-neutral-100 rounded-full px-2 py-2">
+          <div className="bg-orange-500 rounded-full px-2 py-2">
             <div className="flex align-baseline justify-between items-center gap-1">
-              <PlusIcon className="text-neutral-800" />
+              <PlusIcon className="text-white" />
               {openMenu ? (
-                <span className="text-sm tracking-tight font-medium px-2">
+                <span className="text-sm tracking-tight text-white font-medium px-2">
                   New Chat
                 </span>
               ) : null}
@@ -56,7 +56,7 @@ const SideBar = () => {
           </div>
         </div>
       </aside>
-    </>
+    </div>
   );
 };
 
